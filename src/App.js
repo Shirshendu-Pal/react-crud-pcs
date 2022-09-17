@@ -1,24 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import TextFrom from './components/TextFrom';
+import NavigationDrawer from './components/NavigationDrawer';
 
 function App() {
+
+  const pVariable = "this is a props from another componet";
+
+  const pages = [
+    "home",
+    "About",
+    "contact"
+  ]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+   <div >
+   <NavigationDrawer pages = {pages}/>
+   </div>
+   <div style={{marginTop: "20px"}}>
+   <TextFrom    variable = {pVariable}  />
+   </div>
+   </>
   );
 }
 
