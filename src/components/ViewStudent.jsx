@@ -7,12 +7,12 @@ function ViewStudent() {
 
   const customStyles = {
     content: {
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)',
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
     },
   };
 
@@ -26,11 +26,11 @@ function ViewStudent() {
 
   const closeModal = () => {
     setisopenModal(false);
-  }
+  };
 
   const closeEditModal = () => {
     setisopenEditModal(false);
-  }
+  };
 
   return (
     <>
@@ -54,7 +54,7 @@ function ViewStudent() {
               <td>@mdo</td>
               <td>@mdo</td>
               <td>
-              <button
+                <button
                   className="btn btn-success "
                   style={{
                     width: "60px",
@@ -67,8 +67,11 @@ function ViewStudent() {
                   Edit
                 </button>
 
-                <Modal isOpen={isopenEditModal}    onRequestClose={closeEditModal} contentLabel="Example Modal">
-                  
+                <Modal
+                  isOpen={isopenEditModal}
+                  onRequestClose={closeEditModal}
+                  contentLabel="Example Modal"
+                >
                   <div className="modal-dialog" role="document">
                     <div className="modal-content">
                       <div className="modal-header">
@@ -84,38 +87,70 @@ function ViewStudent() {
                         </button>
                       </div>
                       <div className="modal-body">
-                      <div className='container-fluid ' style={{width: "50%"}}>
-    <div className="form-group">
-    <label htmlFor="exampleInputPassword1">name</label>
-    <input type="text" className="form-control" id="exampleInputPassword1" placeholder="Name" />
-  </div>
+                        <div
+                          className="container-fluid "
+                          style={{ width: "50%" }}
+                        >
+                          <div className="form-group">
+                            <label htmlFor="exampleInputPassword1">name</label>
+                            <input
+                              type="text"
+                              className="form-control"
+                              id="exampleInputPassword1"
+                              placeholder="Name"
+                            />
+                          </div>
 
-  <div className="form-group">
-    <label htmlFor="exampleInputPassword1">age</label>
-    <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Age" />
-  </div>
+                          <div className="form-group">
+                            <label htmlFor="exampleInputPassword1">age</label>
+                            <input
+                              type="password"
+                              className="form-control"
+                              id="exampleInputPassword1"
+                              placeholder="Age"
+                            />
+                          </div>
 
-  <div className="form-group">
-    <label htmlFor="exampleInputEmail1">Email address</label>
-    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
-    <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div className="form-group">
-    <label htmlFor="exampleInputPassword1">Password</label>
-    <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
-  </div>
-  <br />
-  
-  </div>
+                          <div className="form-group">
+                            <label htmlFor="exampleInputEmail1">
+                              Email address
+                            </label>
+                            <input
+                              type="email"
+                              className="form-control"
+                              id="exampleInputEmail1"
+                              aria-describedby="emailHelp"
+                              placeholder="Enter email"
+                            />
+                            <small
+                              id="emailHelp"
+                              className="form-text text-muted"
+                            >
+                              We'll never share your email with anyone else.
+                            </small>
+                          </div>
+                          <div className="form-group">
+                            <label htmlFor="exampleInputPassword1">
+                              Password
+                            </label>
+                            <input
+                              type="password"
+                              className="form-control"
+                              id="exampleInputPassword1"
+                              placeholder="Password"
+                            />
+                          </div>
+                          <br />
+                        </div>
                       </div>
                       <div className="modal-footer">
-                       
-                      <button type="submit" className="btn btn-primary">Submit</button>
+                        <button type="submit" className="btn btn-primary">
+                          Submit
+                        </button>
                       </div>
                     </div>
                   </div>
-               
-              </Modal>
+                </Modal>
                 <button
                   className="btn btn-danger"
                   style={{ width: "70px", textAlign: "center" }}
@@ -125,34 +160,36 @@ function ViewStudent() {
                   Delete
                 </button>
 
-                <Modal isOpen={isopenModal}  style={customStyles}  onRequestClose={closeModal} contentLabel="Example Modal">
-                  
-                    <div className="modal-dialog" role="document">
-                      <div className="modal-content">
-                        <div className="modal-header">
-                          <h5 className="modal-title">Confirm Delete?</h5>
-                          <button
-                            type="button"
-                            className="close"
-                            data-dismiss="modal"
-                            aria-label="Close"
-                            onClick={closeModal}
-                          >
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div className="modal-body">
-                          <p>Are you sure you want to delete this</p>
-                        </div>
-                        <div className="modal-footer">
-                         
-                          <button type="button" className="btn btn-primary">
-                           Delete
-                          </button>
-                        </div>
+                <Modal
+                  isOpen={isopenModal}
+                  style={customStyles}
+                  onRequestClose={closeModal}
+                  contentLabel="Example Modal"
+                >
+                  <div className="modal-dialog" role="document">
+                    <div className="modal-content">
+                      <div className="modal-header">
+                        <h5 className="modal-title">Confirm Delete?</h5>
+                        <button
+                          type="button"
+                          className="close"
+                          data-dismiss="modal"
+                          aria-label="Close"
+                          onClick={closeModal}
+                        >
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div className="modal-body">
+                        <p>Are you sure you want to delete this</p>
+                      </div>
+                      <div className="modal-footer">
+                        <button type="button" className="btn btn-primary">
+                          Delete
+                        </button>
                       </div>
                     </div>
-                 
+                  </div>
                 </Modal>
               </td>
             </tr>
@@ -163,7 +200,7 @@ function ViewStudent() {
               <td>@fat</td>
               <td>@fat</td>
               <td>
-              <button
+                <button
                   className="btn btn-success "
                   style={{
                     width: "60px",
@@ -176,8 +213,11 @@ function ViewStudent() {
                   Edit
                 </button>
 
-                <Modal isOpen={isopenEditModal}    onRequestClose={closeEditModal} contentLabel="Example Modal">
-                  
+                <Modal
+                  isOpen={isopenEditModal}
+                  onRequestClose={closeEditModal}
+                  contentLabel="Example Modal"
+                >
                   <div className="modal-dialog" role="document">
                     <div className="modal-content">
                       <div className="modal-header">
@@ -193,38 +233,70 @@ function ViewStudent() {
                         </button>
                       </div>
                       <div className="modal-body">
-                      <div className='container-fluid ' style={{width: "50%"}}>
-    <div className="form-group">
-    <label htmlFor="exampleInputPassword1">name</label>
-    <input type="text" className="form-control" id="exampleInputPassword1" placeholder="Name" />
-  </div>
+                        <div
+                          className="container-fluid "
+                          style={{ width: "50%" }}
+                        >
+                          <div className="form-group">
+                            <label htmlFor="exampleInputPassword1">name</label>
+                            <input
+                              type="text"
+                              className="form-control"
+                              id="exampleInputPassword1"
+                              placeholder="Name"
+                            />
+                          </div>
 
-  <div className="form-group">
-    <label htmlFor="exampleInputPassword1">age</label>
-    <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Age" />
-  </div>
+                          <div className="form-group">
+                            <label htmlFor="exampleInputPassword1">age</label>
+                            <input
+                              type="password"
+                              className="form-control"
+                              id="exampleInputPassword1"
+                              placeholder="Age"
+                            />
+                          </div>
 
-  <div className="form-group">
-    <label htmlFor="exampleInputEmail1">Email address</label>
-    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
-    <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div className="form-group">
-    <label htmlFor="exampleInputPassword1">Password</label>
-    <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
-  </div>
-  <br />
-  
-  </div>
+                          <div className="form-group">
+                            <label htmlFor="exampleInputEmail1">
+                              Email address
+                            </label>
+                            <input
+                              type="email"
+                              className="form-control"
+                              id="exampleInputEmail1"
+                              aria-describedby="emailHelp"
+                              placeholder="Enter email"
+                            />
+                            <small
+                              id="emailHelp"
+                              className="form-text text-muted"
+                            >
+                              We'll never share your email with anyone else.
+                            </small>
+                          </div>
+                          <div className="form-group">
+                            <label htmlFor="exampleInputPassword1">
+                              Password
+                            </label>
+                            <input
+                              type="password"
+                              className="form-control"
+                              id="exampleInputPassword1"
+                              placeholder="Password"
+                            />
+                          </div>
+                          <br />
+                        </div>
                       </div>
                       <div className="modal-footer">
-                       
-                      <button type="submit" className="btn btn-primary">Submit</button>
+                        <button type="submit" className="btn btn-primary">
+                          Submit
+                        </button>
                       </div>
                     </div>
                   </div>
-               
-              </Modal>
+                </Modal>
                 <button
                   className="btn btn-danger"
                   style={{ width: "70px", textAlign: "center" }}
@@ -234,34 +306,36 @@ function ViewStudent() {
                   Delete
                 </button>
 
-                <Modal isOpen={isopenModal}  style={customStyles}  onRequestClose={closeModal} contentLabel="Example Modal">
-                  
-                    <div className="modal-dialog" role="document">
-                      <div className="modal-content">
-                        <div className="modal-header">
-                          <h5 className="modal-title">Confirm Delete?</h5>
-                          <button
-                            type="button"
-                            className="close"
-                            data-dismiss="modal"
-                            aria-label="Close"
-                            onClick={closeModal}
-                          >
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div className="modal-body">
-                          <p>Are you sure you want to delete this</p>
-                        </div>
-                        <div className="modal-footer">
-                         
-                          <button type="button" className="btn btn-primary">
-                           Delete
-                          </button>
-                        </div>
+                <Modal
+                  isOpen={isopenModal}
+                  style={customStyles}
+                  onRequestClose={closeModal}
+                  contentLabel="Example Modal"
+                >
+                  <div className="modal-dialog" role="document">
+                    <div className="modal-content">
+                      <div className="modal-header">
+                        <h5 className="modal-title">Confirm Delete?</h5>
+                        <button
+                          type="button"
+                          className="close"
+                          data-dismiss="modal"
+                          aria-label="Close"
+                          onClick={closeModal}
+                        >
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div className="modal-body">
+                        <p>Are you sure you want to delete this</p>
+                      </div>
+                      <div className="modal-footer">
+                        <button type="button" className="btn btn-primary">
+                          Delete
+                        </button>
                       </div>
                     </div>
-                 
+                  </div>
                 </Modal>
               </td>
             </tr>
@@ -285,8 +359,11 @@ function ViewStudent() {
                   Edit
                 </button>
 
-                <Modal isOpen={isopenEditModal}    onRequestClose={closeEditModal} contentLabel="Example Modal">
-                  
+                <Modal
+                  isOpen={isopenEditModal}
+                  onRequestClose={closeEditModal}
+                  contentLabel="Example Modal"
+                >
                   <div className="modal-dialog" role="document">
                     <div className="modal-content">
                       <div className="modal-header">
@@ -302,38 +379,70 @@ function ViewStudent() {
                         </button>
                       </div>
                       <div className="modal-body">
-                      <div className='container-fluid ' style={{width: "50%"}}>
-    <div className="form-group">
-    <label htmlFor="exampleInputPassword1">name</label>
-    <input type="text" className="form-control" id="exampleInputPassword1" placeholder="Name" />
-  </div>
+                        <div
+                          className="container-fluid "
+                          style={{ width: "50%" }}
+                        >
+                          <div className="form-group">
+                            <label htmlFor="exampleInputPassword1">name</label>
+                            <input
+                              type="text"
+                              className="form-control"
+                              id="exampleInputPassword1"
+                              placeholder="Name"
+                            />
+                          </div>
 
-  <div className="form-group">
-    <label htmlFor="exampleInputPassword1">age</label>
-    <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Age" />
-  </div>
+                          <div className="form-group">
+                            <label htmlFor="exampleInputPassword1">age</label>
+                            <input
+                              type="password"
+                              className="form-control"
+                              id="exampleInputPassword1"
+                              placeholder="Age"
+                            />
+                          </div>
 
-  <div className="form-group">
-    <label htmlFor="exampleInputEmail1">Email address</label>
-    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
-    <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div className="form-group">
-    <label htmlFor="exampleInputPassword1">Password</label>
-    <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
-  </div>
-  <br />
-  
-  </div>
+                          <div className="form-group">
+                            <label htmlFor="exampleInputEmail1">
+                              Email address
+                            </label>
+                            <input
+                              type="email"
+                              className="form-control"
+                              id="exampleInputEmail1"
+                              aria-describedby="emailHelp"
+                              placeholder="Enter email"
+                            />
+                            <small
+                              id="emailHelp"
+                              className="form-text text-muted"
+                            >
+                              We'll never share your email with anyone else.
+                            </small>
+                          </div>
+                          <div className="form-group">
+                            <label htmlFor="exampleInputPassword1">
+                              Password
+                            </label>
+                            <input
+                              type="password"
+                              className="form-control"
+                              id="exampleInputPassword1"
+                              placeholder="Password"
+                            />
+                          </div>
+                          <br />
+                        </div>
                       </div>
                       <div className="modal-footer">
-                       
-                      <button type="submit" className="btn btn-primary">Submit</button>
+                        <button type="submit" className="btn btn-primary">
+                          Submit
+                        </button>
                       </div>
                     </div>
                   </div>
-               
-              </Modal>
+                </Modal>
 
                 <button
                   className="btn btn-danger"
@@ -344,34 +453,36 @@ function ViewStudent() {
                   Delete
                 </button>
 
-                <Modal isOpen={isopenModal}  style={customStyles}  onRequestClose={closeModal} contentLabel="Example Modal">
-                  
-                    <div className="modal-dialog" role="document">
-                      <div className="modal-content">
-                        <div className="modal-header">
-                          <h5 className="modal-title">Confirm Delete?</h5>
-                          <button
-                            type="button"
-                            className="close"
-                            data-dismiss="modal"
-                            aria-label="Close"
-                            onClick={closeModal}
-                          >
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div className="modal-body">
-                          <p>Are you sure you want to delete this</p>
-                        </div>
-                        <div className="modal-footer">
-                         
-                          <button type="button" className="btn btn-primary">
-                           Delete
-                          </button>
-                        </div>
+                <Modal
+                  isOpen={isopenModal}
+                  style={customStyles}
+                  onRequestClose={closeModal}
+                  contentLabel="Example Modal"
+                >
+                  <div className="modal-dialog" role="document">
+                    <div className="modal-content">
+                      <div className="modal-header">
+                        <h5 className="modal-title">Confirm Delete?</h5>
+                        <button
+                          type="button"
+                          className="close"
+                          data-dismiss="modal"
+                          aria-label="Close"
+                          onClick={closeModal}
+                        >
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div className="modal-body">
+                        <p>Are you sure you want to delete this</p>
+                      </div>
+                      <div className="modal-footer">
+                        <button type="button" className="btn btn-primary">
+                          Delete
+                        </button>
                       </div>
                     </div>
-                 
+                  </div>
                 </Modal>
               </td>
             </tr>
