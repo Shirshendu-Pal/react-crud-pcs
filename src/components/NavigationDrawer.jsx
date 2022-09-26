@@ -1,9 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Outlet, Link } from "react-router-dom";
 
 function NavigationDrawer(props) {
 
     // console.log(props.pages.map((page) => page))
+    console.log(props.page)
 
   return (
     <>
@@ -18,10 +19,16 @@ function NavigationDrawer(props) {
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
   
             <li className="nav-item">
-            <Link className="nav-link active text-light" aria-current="page" to="/">registration</Link>
+            <Link className="nav-link active text-light" to="/">registration</Link>
             </li>
             <li className="nav-item">
-            <Link className="nav-link active text-light" aria-current="page" to="/login">login</Link>
+            <Link className="nav-link active text-light" to="/login">login</Link>
+            </li>
+            <li className="nav-item">
+            <Link className="nav-link active text-light" to="/addStudent">add-student</Link>
+            </li>
+            <li className="nav-item">
+            <Link className="nav-link active text-light" to="/viewStudent">view-student</Link>
             </li>
            
 
@@ -34,6 +41,8 @@ function NavigationDrawer(props) {
     </div>
   </div>
 </nav>
+
+<Outlet/>
 
 
 
