@@ -24,12 +24,12 @@ function NavigationDrawer(props) {
             <li className="nav-item">
             <Link className="nav-link active text-light" to="/login">login</Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
             <Link className="nav-link active text-light" to="/addStudent">add-student</Link>
             </li>
             <li className="nav-item">
             <Link className="nav-link active text-light" to="/viewStudent">view-student</Link>
-            </li>
+            </li> */}
            
 
             {/* <li className="nav-item">

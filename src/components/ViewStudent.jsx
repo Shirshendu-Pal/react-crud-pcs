@@ -146,7 +146,8 @@ function ViewStudent() {
 
   useEffect(() => {
     showStudents();
-  });
+  },[]
+  );
 
   const customStyles = {
     content: {
@@ -215,8 +216,9 @@ function ViewStudent() {
                       textAlign: "center",
                     }}
                     onClick={() => {
-                      openViewModal();
                       setViewId(row._id);
+                      openViewModal();
+                      
                       viewStudentDetails();
                     }}
                   >
@@ -267,8 +269,9 @@ function ViewStudent() {
                       textAlign: "center",
                     }}
                     onClick={() => {
+                     setedit(row._id);
                       openEditModal();
-                      setedit(row._id);
+                      
                       viewStudent()
                     }}
                   >

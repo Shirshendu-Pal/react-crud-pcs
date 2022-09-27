@@ -12,6 +12,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AboutUs from './components/AboutUs';
 import AddStudent from './components/AddStudent';
 import ViewStudent from './components/ViewStudent';
+import NavigationAfterLogin from './components/NavigationAfterLogin';
 
 
 function App() {
@@ -33,10 +34,13 @@ function App() {
         <Route path="/" element={<NavigationDrawer page={pages}/>}>
           <Route index element={<TextFrom />} />
           <Route path="login" element={<AboutUs />} />
-          <Route path="addStudent" element={<AddStudent />} />
-          <Route path="viewStudent" element={<ViewStudent />} />
+         
          
         </Route>
+        <Route path="/" element= {<NavigationAfterLogin /> } >
+        <Route path="addStudent" element={<AddStudent />} />
+          <Route path="viewStudent" element={<ViewStudent />} />
+          </Route>
       </Routes>
     </BrowserRouter>
   
